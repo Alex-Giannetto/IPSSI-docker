@@ -1,0 +1,93 @@
+header {
+  background-color: #F6F6F6;
+  grid-area: nav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 99999999;
+  border-bottom: solid 1px #DEDEDE; }
+  header h1 {
+    font-weight: 400;
+    font-size: 23px; }
+
+.messages {
+  grid-area: messages;
+  background-color: #FFFFFF;
+  overflow-y: scroll;
+  padding: 10px 20px 0 20px; }
+  .messages .listeMessage .message {
+    max-width: 100%;
+    position: relative;
+    min-height: 50px; }
+    .messages .listeMessage .message .content {
+      background-color: #E5E5EA;
+      padding: 10px 15px;
+      border-radius: 20px;
+      width: auto;
+      max-width: 65%;
+      position: absolute; }
+    .messages .listeMessage .message:nth-child(odd) .content {
+      background-color: #1E90F9;
+      color: white;
+      text-align: right;
+      right: 0; }
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+  border-top: solid 1px #D8D8D8; }
+  footer form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 10px;
+    height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #F6F6F6; }
+    footer form textarea {
+      width: 80%;
+      min-width: 80%;
+      max-width: 80%;
+      height: 40px;
+      min-height: 40px;
+      max-height: 40px;
+      grid-area: textarea;
+      background-color: #fff;
+      border-radius: 20px;
+      border: solid 1px #DEDEDE;
+      font-size: 15px;
+      padding: 10px; }
+    footer form .btn--submit {
+      width: 40px;
+      margin-left: 5%;
+      height: 40px;
+      background-color: #1E90F9;
+      border: none;
+      border-radius: 50px;
+      background-image: url(../icon/send-button.svg);
+      background-size: 20px;
+      background-repeat: no-repeat;
+      background-position: 55% center; }
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 55px 1fr 60px;
+  grid-template-areas: "nav nav" " messages messages" "footer footer"; }
